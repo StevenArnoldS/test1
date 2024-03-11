@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull Up Detail</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="/src/css/app.css">
+    <link rel="stylesheet" href="/src/css/feed.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="FitHome">
+    <link rel="apple-touch-icon" href="/src/images/icons/icon-72x72.png" sizes="72x72">
+    <meta name="msapplication-TileImage" content="/src/images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="theme-color" content="#3f51b5">
+    <style>
+    :root {
+        --background-color: #020202;
+        --text-color: #fff;
+        --accent-color: #007bff;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+    }
+
+    .content-container {
+      position: relative;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      text-align: center;
+      margin: auto;
+    }
+
+    .back-button img {
+      width: 20px;
+      transition: transform 0.3s ease;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    .back-button:hover img {
+      transform: scale(1.1);
+    }
+
+    .detail-image-container {
+      width: 50vw;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .detail-image {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .detail-image-container:hover .detail-image {
+      transform: scale(1.03);
+    }
+
+    ol {
+      display: inline-block;
+      text-align: left;
+      margin: auto;
+    }
+
+    ol li {
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    h1, .description {
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container content-container">
+  <a href="../program" class="back-button">
+    <img src="../src/images/back.png" alt="Back">
+  </a>
+  <div class="detail-image-container">
+    <img src="../src/images/pullup.jpg" alt="Push Up" class="detail-image">
+  </div>
+  <h1 class="title">Pull Up</h1>
+  <div class="description">
+    <p>Pull-ups strengthen the back, shoulders, and arms, and improve grip strength. They're performed by lifting your body up to a bar and lowering back down.</p>
+    <h3>Steps to perform a Pull Up:</h3>
+    <ol>
+      <li>Hang from a pull-up bar with your hands shoulder-width apart, palms facing away from you.</li>
+      <li>Pull yourself up until your chin is level with the bar, then slowly lower back down.</li>
+      <li>Keep your core engaged and avoid swinging your legs.</li>
+      <li>Repeat for the desired number of repetitions.</li>
+    </ol>
+  </div>
+</div>
+<script defer src="/src/js/material.min.js"></script>
+<script src="/src/js/promise.js"></script>
+<script src="/src/js/fetch.js"></script>
+<script src="/src/js/idb.js"></script>
+<script src="/src/js/utility.js"></script>
+<script src="/src/js/app.js"></script>
+<script src="/src/js/feed.js"></script>
+</body>
+</html>

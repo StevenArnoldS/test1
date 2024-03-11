@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Program</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="/src/css/app.css">
+  <link rel="stylesheet" href="/src/css/feed.css">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="FitHome">
+  <link rel="apple-touch-icon" href="/src/images/icons/icon-72x72.png" sizes="72x72">
+  <meta name="msapplication-TileImage" content="/src/images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#3f51b5">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #020202;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-color: #000;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .navbar .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: red;
+      transition: width 0.5s ease;
+    }
+
+    .navbar .navbar-nav .nav-link:hover::after {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("/src/images/navbar.png") !important;
+      width: 30px;
+      height: 30px;
+    }
+
+    button{
+      float: right;
+    }
+    
+
+    .container {
+      margin-top: 56px;
+    }
+    #nav{
+      color: #f93a70;
+    }
+    #nav:hover{
+      text-decoration: none;
+      color: red !important;
+    }
+    .card {
+      transition: transform .2s;
+      background-color: #1c2138;
+      border-radius: 10px;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      height: 300px;
+      object-fit: cover;
+    }
+    
+    .card-body button {
+      transition: background-color .2s;
+    }
+    .card-body button:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+      .container{
+        margin-top: 56px;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:hover{
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+<div id="app">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-5" href="/" id="nav">FitHome</a>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item ms-3">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link active" href="/program">Program</a>
+          </li>
+          <li class="nav-item ms-3">
+            <a class="nav-link" href="../aboutus">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h3 class="text-center">Build your best body</h3>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a href="../pushup">
+          <div class="card">
+            <img src="../src/images/pushup.jpg" class="card-img-top img-fluid">
+            <div class="card-body">
+              <h5 class="card-title">Push Up</h5>
+              <p class="card-text">Push-ups are a basic exercise that uses body weight to work the chest, triceps, and deltoids.</p>
+              <a href="../pushup">
+                <button class="btn btn-primary">Check Detail</button>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="../situp">
+          <div class="card">
+            <img src="../src/images/situp.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sit Up</h5>
+              <p class="card-text">Sit-ups primarily target the abdominal muscles.</p>
+              <a href="../situp">
+                <button class="btn btn-primary">Check Detail</button>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="../pullup">
+          <div class="card">
+            <img src="../src/images/pullup.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pull Up</h5>
+              <p class="card-text">Pull-ups strengthen the upper back and arms by lifting your body until your chin passes a bar.</p>
+              <a href="../pullup">
+                <button class="btn btn-primary">Check Detail</button>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a href="../squat">
+          <div class="card">
+            <img src="../src/images/squat.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Squat</h5>
+              <p class="card-text">Squats are a strength exercise for the thighs, hips, buttocks, quadriceps, and hamstrings.</p>
+              <a href="../squat">
+                <button class="btn btn-primary">Check Detail</button>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="../plank">
+          <div class="card">
+            <img src="../src/images/plank.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Plank</h5>
+              <p class="card-text">Planks are a stability exercise that trains the whole body, focusing especially on the core.</p>
+              <a href="../plank">
+                <button class="btn btn-primary">Check Detail</button>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="../benchpress">
+          <div class="card">
+            <img src="../src/images/benchpress.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bench Press</h5>
+              <p class="card-text">The bench press is a weight training exercise that targets the chest, triceps, and deltoids.</p>
+              <a href="../benchpress">
+                <button class="btn btn-primary">Check Detail</button>
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script defer src="/src/js/material.min.js"></script>
+<script src="/src/js/promise.js"></script>
+<script src="/src/js/fetch.js"></script>
+<script src="/src/js/idb.js"></script>
+<script src="/src/js/utility.js"></script>
+<script src="/src/js/app.js"></script>
+<script src="/src/js/feed.js"></script>
+</body>
+</html>
